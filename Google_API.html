@@ -1,0 +1,277 @@
+<!DOCTYPE html5>
+<html lang="en" fir="ltr">
+  <style>
+    /*Code sourced from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_signup_form_modal*/
+
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    /* Add a background color when the inputs get focus */
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Set a style for all buttons */
+    button {
+      background-color: #ff9eb5;
+      color: rgb(255, 255, 255);
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+    
+    button:hover {
+      opacity:1;
+    }
+    
+    /* Extra styles for the cancel button */
+    .cancelbtn {
+      padding: 14px 20px;
+      background-color: rgb(160, 163, 163);
+    }
+    
+    /* Float cancel and signup buttons and add an equal width */
+    .cancelbtn, .signupbtn {
+      float: left;
+      width: 50%;
+    }
+    
+    /* Add padding to container elements */
+    .container {
+      padding: 16px;
+    }
+
+    .red-div {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right:0; /* This is what you need */
+}
+    
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background: "logo.png";
+      padding-top: 50px;
+    }
+    
+    /* Modal Content/Box */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+    }
+    
+    /* Style the horizontal ruler */
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+     
+    /* The Close Button (x) */
+    .close {
+      position: absolute;
+      right: 35px;
+      top: 15px;
+      font-size: 40px;
+      font-weight: bold;
+      color: #000000;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+    
+    /* Clear floats */
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    /* Change styles for cancel button and signup button on extra small screens */
+    @media screen and (max-width: 300px) {
+      .cancelbtn, .signupbtn {
+         width: 100%;
+      }
+    }
+    </style>
+    <head>
+        <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+            
+            /* Create two equal columns that floats next to each other */
+            .column {
+              float: left;
+              width: 50%;
+              padding: 10px;
+              height: 300px; /* Should be removed. Only for demonstration */
+            }
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            </style>
+      <style>
+        .button {
+          background-color: #ff9eb5;
+          border: none;
+          color: white;
+          padding: 15px 25px;
+          text-align: center;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        
+        .button:hover {
+          background-color: #ff6b8e;
+        }
+
+        .button { position: absolute; top: 70%; left: 45%;
+        }
+
+        .button {border-radius: 8px;}
+        </style>
+        <meta charset="utf-8">
+        <div class="topnav">
+            <a class="active" href="./SOUL.html">Home</a>
+            <a href="./Connect.html">Connect</a>
+            <a href="./Account.html">Account</a>
+            <a href="./AboutUs.html">About Us</a>
+
+            <style>
+                body {
+                  margin: 0;
+                  font-family: Arial, Helvetica, sans-serif;
+                }
+                
+                .topnav {
+                  overflow: hidden;
+                  background-color: #333;
+                }
+                
+                .topnav a {
+                  float: left;
+                  color: #fffafa;
+                  text-align: center;
+                  padding: 14px 16px;
+                  text-decoration: none;
+                  font-size: 17px;
+                }
+                
+                .topnav a:hover {
+                  background-color: #ddd;
+                  color: black;
+                }
+                
+                .topnav a.active {
+                  background-color: #80D2F5;
+                  color: white;
+                }
+                </style>
+            
+          </div>
+          
+    </head>
+    
+    
+    <body background="logo.png">
+      
+      <span onclick="document.getElementById('id02')" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" action="/action_page.php">
+      <div class="container">
+
+        <h1>Tell us a little bit about yourself.</h1>
+        <p><i>What do you wish to gain on Soul?</i></p>
+        <p><i>Choose as many as apply to you.</i></p>
+
+        <hr>
+
+        <div id="map"></div>
+        <script>
+          var map;
+          function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: -34.397, lng: 150.644},
+              zoom: 8
+            });
+          }
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-Lae6KUcZQoTeuQbcizc5KusuDgMC3ik&callback=initMap"
+        async defer></script>
+    
+    <div class="clearfix"></div>
+     <button type="button" onClick="javascript:history.go(-1)" class="cancelbtn">Back</button> 
+      <button type="submit" class="signupbtn" href="./SignUp_Page2.html">Next</button>
+
+    </div>
+
+  </form>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+var modal_btnNext = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+window.onclick = function(event) {
+  if (event.target == modal_btnNext) {
+    modal.style.display = "./SignUp_Page2.html";
+  }
+}
+</script>
+
+    </body>
